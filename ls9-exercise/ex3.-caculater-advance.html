@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculater Advance</title>
+</head>
+
+<body>
+    <div style="padding: 5px; width: 20%; background-color: black;" >
+        <table style="background-color: white;" cellpadding="0px" cellspacing="10x">
+            <tr>
+                <td colspan="4" style="text-align: right";><input type="text" style="width: 125px;" id="view"></td>
+            </tr>
+
+            <tr>
+                <td colspan="4"></td>
+            </tr>
+
+            <tr style="text-align: center;">
+                <td><button type="button" name="btn" value ="1" onclick="inputValue(value)"> 1 </button></td>
+                <td><button type="button" name="btn" value ="2" onclick="inputValue()"> 2 </button></td>
+                <td><button type="button" name="btn" value ="3" onclick="inputValue()"> 3 </button></td>
+                <td><button type="button" name="op"  value ="+" onclick="inputValue()"> + </button></td>
+            </tr>
+          
+            <tr style="text-align: center;">
+                <td><button type="button" name="btn" value ="4" onclick="inputValue(this.value)"> 4 </button></td>
+                <td><button type="button" name="btn" value ="5" onclick="inputValue(this.value)"> 5 </button></td>
+                <td><button type="button" name="btn" value ="6" onclick="inputValue(this.value)"> 6 </button></td>
+                <td><button type="button" style="width: 100%;" name="op"  value ="-" onclick="inputValue(this.value)"> - </button></td>
+            </tr>
+
+            <tr style="text-align: center;">
+                <td><button type="button" name="btn" value ="7" onclick="inputValue(this.value)"> 7 </button></td>
+                <td><button type="button" name="btn" value ="8" onclick="inputValue(this.value)"> 8 </button></td>
+                <td><button type="button" name="btn" value ="9" onclick="inputValue(this.value)"> 9 </button></td>
+                <td><button type="button" style="width: 100%;" name="op"  value ="*" onclick="inputValue(this.value)"> * </button></td>
+            </tr>
+
+            <tr style="text-align: center;">
+                <td style="width: 30px;">
+                    <button type="button" name="delete"         onclick="xoa();"> AC </button></td>
+                <td><button type="button" name="btn" value ="0" onclick="inputValue(this.value)"> 0 </button></td>
+                <td><button type="button" name= "reusult"       onclick="result();"> = </button></td>
+                <td><button type="button" style="width: 100%;" name="op"  value ="/" onclick="inputValue(this.value)"> / </button></td>
+            </tr>
+        </table>
+    </div> 
+    
+    <script>
+        let view = document.getElementById("view");
+        function inputValue(value) {
+            view.value = view.value + value;
+        }
+
+        function result() {
+        let result = eval(view.value);
+            view.value = result;
+        }
+        
+        function xoa() {
+            view.value="";
+        }
+    </script>
+</body>
+</html>
